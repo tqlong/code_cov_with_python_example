@@ -1,16 +1,17 @@
 name: CodeCov
 on: push
-env:
-  PYTHON: '3.9'
-steps:
-  - name: 'generate report'
-    run: |
-      pip install coverage
-      coverage run -m unittest
-  - name: Upload coverage to Codecov
-      uses: actions/checkout@master
-      uses: codecov/codecov-action@v1
-      with:
-        file: ./coverage
-        flags: unittests
-        fail_ci_if_error: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      PYTHON: '3.9'
+    steps:
+      - name: 'generate report'
+        run: |
+          pip install coverage
+          coverage run -m unittest
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          flags: unittests
+          fail_ci_if_error: true
