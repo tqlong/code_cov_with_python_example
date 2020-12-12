@@ -4,8 +4,11 @@ env:
   PYTHON: '3.9'
 steps:
   - name: 'generate report'
-    run: python -m unittest
+    run: |
+      pip install coverage
+      coverage run -m unittest
   - name: Upload coverage to Codecov
+      uses: actions/checkout@master
       uses: codecov/codecov-action@v1
       with:
         file: ./coverage
