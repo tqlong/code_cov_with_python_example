@@ -1,0 +1,2 @@
+[![Actions Status](https://github.com/tqlong/code_cov_with_python_example/workflows/Ubuntu/badge.svg)](https://github.com/tqlong/code_cov_with_python_example/actions)
+[![codecov](https://codecov.io/gh/tqlong/code_cov_with_python_example/branch/main/graph/badge.svg)](https://codecov.io/gh/tqlong/code_cov_with_python_example)
